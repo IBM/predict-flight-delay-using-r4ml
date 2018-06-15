@@ -173,25 +173,17 @@ options to specify exactly what you want shared from your notebook:
 The notebook is well documented and will guide you through the exercise. Some of the main tasks that will be covered include:
 
 * Load packages and data and do the initial transformation and various feature engineering.
-
 * Use the built-in SVM algorithm from R4ML to predict whether an airline will be delayed or not.
-
 * Observe the output accuracy and confusion matrix.
-
 * Use Cross Validation to improve the accuracy of the classifications.
 
 You will also see the advantages of using R4ML, which is a git-downloadable open-source R packaged from IBM. Some of these include:
 
 * Created on top of SparkR and Apache SystemML, so it supports features from both.
-
 * Acts as an R bridge between SparkR and Apache SystemML.
-
 * Provides a collection of canned algorithms.
-
 * Provides the ability to create custom ML algorithms.
-
 * Provides both SparkR and Apache SystemML functionality.
-
 * APIs that should be familiar to R users.
 
 ## Sample output

@@ -1,134 +1,122 @@
 # Predicting flight delay and building an ML pipeline using R4ML
 
-In this developer journey we will use R4ML, a scalable R package, running on IBM Data Science Experience (DSX) to perform various Machine Learning exercises. For those users who are unfamiliar with the Data Science Experience, DSX is an interactive, collaborative, cloud-based environment where data scientists, developers, and others interested in data science can use tools (e.g., RStudio, Jupyter Notebooks, Spark, etc.) to collaborate, share, and gather insight from their data.
+In this developer journey we will use R4ML, a scalable R package, running on IBM Watson Studio to perform various Machine Learning exercises. For those users who are unfamiliar with the Watson Studio, it is an interactive, collaborative, cloud-based environment where data scientists, developers, and others interested in data science can use tools (e.g., RStudio, Jupyter Notebooks, Spark, etc.) to collaborate, share, and gather insight from their data.
 
 When the reader has completed this journey, they will understand how to:
 
 * Use [Jupyter Notebooks](http://jupyter.org/) to load, visualize, and analyze data.
-* Run Notebooks in [IBM Data Science Experience](https://datascience.ibm.com/).
-* Leverage [R4ML](https://github.com/SparkTC/r4ml) to conduct preprocessing and exploratory analysis with big data
+* Run Notebooks in [IBM Watson Studio](https://dataplatform.ibm.com).
+* Leverage [R4ML](https://github.com/SparkTC/r4ml) to conduct preprocessing and exploratory analysis with big data.
 
 The Intended audience of this code pattern is data scientists, who wish to apply scalable machine learning algorithms using R.
-R4ML provides various out of the box algorithms to experiments with. This specific Code Pattern will provide a SVM (Suport Vector Machine) example to demonstrate the ease and power of R4ML in implementing the scalable classification. For more information about additional functionality support, documentation, and the roadmap, please vist [R4ML](https://github.com/SparkTC/r4ml)
 
+This specific Code Pattern will provide a SVM (Suport Vector Machine) example to demonstrate the ease and power of R4ML in implementing scalable classification. R4ML provides various out-of-the-box algorithms to experiment with. For more information about additional R4ML functionality, support, documentation, and roadmap, please vist [R4ML](https://github.com/SparkTC/r4ml).
+
+### What problem does it solve for developers?
+
+* Learn Large Scale Model Training for classification using a Support Vector Machine.
+* Learn Large Scale Model Tuning using Cross validation.
 
 ### Source of data
 
- - We use the Airline On-Time Statistics and Delay Causes from RITA
-    A 1% sample of the "airline" dataset available at
-     http://stat-computing.org/dataexpo/2009/the-data.html This data
-     originally comes from RITA (http://www.rita.dot.gov) and is in the
-     public domain.
-
- - For this example, we will use, a subset of above dataset, which is shipped with R4ML
-
- - User can use the bigger dataset from RITA and our code will work with that.
-
-
+- We will use the Airline On-Time Statistics and Delay Causes from [RITA](http://www.rita.dot.gov). A 1% sample of the "airline" dataset is available [here](http://stat-computing.org/dataexpo/2009/the-data.html). All of the data is in the public domain.
+- For this Code Pattern, we will use a subset of the above dataset, which is shipped with R4ML.
+- This Code Pattern can also work with the larger RITA dataset.
 
 ## Flow
 
 ![](doc/source/images/architecture.png)
 
-1. Load the provided notebook onto the IBM Data Science Experience platform.
+1. Load the provided notebook onto into IBM Watson Studio.
 2. The notebook interacts with an Apache Spark instance.
-3. A sample big data dataset is loaded into the Jupyter Notebook.
-4. To perform machine learning, R4ML is used atop Apache Spark.
-
-# What problem does it solve for developers?
-
-1. Large Scale Model Training for classification using a Support Vector Machine
-2. Large Scale Model Tuning using Cross validation
+3. A sample big data dataset is loaded into a Jupyter Notebook.
+4. R4ML, running atop Apache Spark, is used to perform machine learning.
 
 Included Components:
 
-* [IBM Data Science Experience](https://www.ibm.com/bs-en/marketplace/data-science-experience): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
+* [IBM Watson Studio](https://dataplatform.ibm.com): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
 * [IBM Analytics for Apache Spark](https://console.ng.bluemix.net/catalog/services/apache-spark): An open source cluster computing framework optimized for extremely fast and large scale data processing.
-* [Bluemix Object Storage](https://console.bluemix.net/catalog/services/object-storage): Build and deliver cost effective apps and services with high reliability and fast speed to market in an unstructured cloud data store.
+* [IBM Cloud Object Storage](https://console.bluemix.net/catalog/services/object-storage): Build and deliver cost effective apps and services with high reliability and fast speed to market in an unstructured cloud data store.
 
 ## Featured Technologies:
 
 * [Jupyter Notebooks](http://jupyter.org/): An open source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
 * [R4ML](https://github.com/SparkTC/r4ml): R4ML is a scalable, hybrid approach to ML/Stats using R, Apache SystemML, and Apache Spark
 
-
-## Analysis Section:
-
-#### Scalable R4ML Key Features:
-
-  - R4ML is a git downloadable open source R package from IBM
-
-  - Created on top of SparkR and Apache SystemML (so it supports features from both)
-
-  - Acts as a R bridge between SparkR and Apache SystemML
-
-  - Provides a collection of canned algorithms
-
-  - Provides the ability to create custom ML algorithms
-
-  - Provides both SparkR and Apache SystemML functionality
-
-  - APIs are friendlier to the R user
-
-#### Predict whether the flight will be delayed or not?
-  
-  - We will first load the package and data and do the initial transformation of the dataset
-  
-  - Then we will use the inbuilt SVM algorithm from R4ML to predict whether airline will be delayed or not
-
-  - Then we will observe the output accuracy and confusion matrix
-
-  - We will use Cross Validation to improve the accuracy of the classifications.
-
-  - More details are in the notebook.
-
 # Steps:
 
-Follow these steps to setup and run this developer journey. These steps are described in detail below.
+This Code Pattern consists of following activities:
 
-1. [Sign up for the Data Science Experience](#1-sign-up-for-the-data-science-experience)
-2. [Create the notebook](#2-create-the-notebook)
-3. [Run the notebook](#3-run-the-notebook)
-4. [Save and share](#4-save-and-share)
+* [Run Jupyter notebooks in the IBM Watson Studio](#run-jupyter-notebooks-in-the-ibm-watson-studio).
+* [Explore and Analyze the Data](#explore-and-analyze-the-data).
 
-## 1. Sign up for the Data Science Experience
+## Run Jupyter notebooks in the IBM Watson Studio
 
-Sign up for IBM's [Data Science Experience](http://datascience.ibm.com/). By signing up for the Data Science Experience, two services will be created in your Bluemix account: ``DSX-Spark`` and ``DSX-ObjectStore``. If these services do not exist, or if you are already using them for some other application, you will need to create new instances.
+1. [Sign up for the Watson Studio](#1-sign-up-for-the-watson-studio)
+2. [Create a new Watson Studio project](#2-create-a-new-watson-studio-project)
+3. [Create the Spark service](#3-create-the-spark-service)
+4. [Create the notebook](#4-create-the-notebook)
+5. [Run the notebook](#5-run-the-notebook)
+6. [Save and Share](#6-save-and-share)
 
-To create these services:
-* Login or create your [Bluemix](http://bluemix.net) account.
-* Create your Spark service by selecting the service type [Apache Spark](https://console.bluemix.net/catalog/services/apache-spark). If the name has not already been used, name your service ``DSX-Spark`` so that you can keep track of it.
-* Create your Object Storage service by selecting the service type [Cloud Object Storage](https://console.bluemix.net/catalog/infrastructure/object-storage-group). If the name has not already been used, name your service ``DSX-ObjectStorage`` so that you can keep track of it.
+### 1. Sign up for the Watson Studio
 
-> Note: When creating your Object Storage service, select the ``Swift`` storage type in order to avoid having to pay an upgrade fee.
+Log in or sign up for IBM's [Watson Studio](https://dataplatform.ibm.com).
 
-Take note of your service names as you will need to select them in the following steps.
+> Note: if you would prefer to skip the remaining Watson Studio set-up steps and just follow along by viewing the completed Notebook, simply:
+> * View the completed [notebook](https://github.com/IBM/predict-flight-delay-using-r4ml/tree/master/notebooks/R4ML_Classification_modeling_using_SVM.ipynb) and its outputs, as is. 
+> * While viewing the notebook, you can optionally download it to store for future use.
+> * When complete, continue this code pattern by jumping ahead to the [Explore and Analyze the Data](#explore-and-analyze-the-data) section.
 
-## 2. Create the notebook
+### 2. Create a new Watson Studio project
 
-First you must create a new Project:
-* From the [IBM Data Science Experience page](https://apsportal.ibm.com/analytics) either click the ``Get Started`` tab at the top or scroll down to ``Recently updated projects``.
-* Click on ``New project`` under ``Recently updated projects``.
-* Enter a ``Name`` and optional ``Description``. 
-* For ``Spark Service``, select your Apache Spark service name.
-* For ``Storage Type``, select the ``Object Storage (Swift API)`` option.
-* For ``Target Object Storage Instance``, select your Object Storage service name.
-* Click ``Create``.
+* Select the `New Project` option from the Watson Studio landing page and choose the `Data Science` option.
 
+![](https://raw.githubusercontent.com/IBM/pattern-images/master/watson-studio/project_choices.png)
 
-Create Notebook 1:
-* Click on your project to open up the project details panel.
-* Click ``add notebooks``.
-* Click the tab for ``From URL`` and enter a ``Name`` and optional ``Description``.
-* Select Language 'R'
-* Select Spark version 2.1
-* For ``Notebook URL`` enter: https://github.com/aloknsingh/ibm_r4ml_svm_classification/notebooks/R4ML_Classification_modeling_using_SVM.ipynb
-* For ``Spark Service``, select your Apache Spark service name.
-* Click ``Create Notebook``.
+* To create a project in Watson Studio, give the project a name and either create a new `Cloud Object Storage` service or select an existing one from your IBM Cloud account.
 
+![](https://raw.githubusercontent.com/IBM/pattern-images/master/watson-studio/new_project.png)
 
+* Upon a successful project creation, you are taken to a dashboard view of your project. Take note of the `Assets` and `Settings` tabs, we'll be using them to associate our project with any external assets (datasets and notebooks) and any IBM cloud services.
 
-## 3. Run the notebook
+![](https://raw.githubusercontent.com/IBM/pattern-images/master/watson-studio/project_dashboard.png)
+
+## 3. Create the Spark service
+
+* In your project go to the `Settings` tab, scroll down to `Associated Services` and choose `+ Add service` -> `Spark`
+
+![](https://raw.githubusercontent.com/IBM/pattern-images/master/watson-studio/add_service.png)
+
+* Either choose and `Existing` Spark service, or create a `New` one
+
+<img width="500" src="https://raw.githubusercontent.com/IBM/pattern-images/master/watson-studio/add_existing_spark_service.png">
+
+## 4. Create the notebook
+
+* From the project dashboard view, click the `Assets` tab, click the `+ New notebook` button.
+
+![](https://raw.githubusercontent.com/IBM/pattern-images/master/watson-studio/new_notebook.png)
+
+* Give your notebook a name and select your desired runtime, in this case we'll be using the associated Spark runtime.
+
+> Note: For this Code Pattern, after setting the run-time to your `Spark` instance, set language to `R`
+
+![](https://raw.githubusercontent.com/IBM/pattern-images/master/watson-studio/notebook_spark.png)
+
+* Now select the `From URL` tab to specify the URL to the notebook in this repository.
+
+![](https://raw.githubusercontent.com/IBM/pattern-images/master/watson-studio/notebook_with_url_spark.png)
+
+* Enter this URL:
+
+```
+https://github.com/IBM/predict-flight-delay-using-r4ml/blob/master/notebooks/R4ML_Classification_modeling_using_SVM.ipynb
+```
+
+* Click the `Create` button.
+
+## 5. Run the notebook
 
 When a notebook is executed, what is actually happening is that each code cell in
 the notebook is executed, in order, from top to bottom.
@@ -154,7 +142,7 @@ There are several ways to execute the code cells in your notebook:
     panel. Here you can schedule your notebook to be executed once at some future
     time, or repeatedly at your specified interval.
 
-## 4. Save and share
+## 6. Save and share
 
 ### How to save your work:
 
@@ -179,6 +167,46 @@ options to specify exactly what you want shared from your notebook:
   your dashDB credentials from being shared.
 * `All content, including code`: displays the notebook as is.
 * A variety of `download as` options are also available in the menu.
+
+## Explore and Analyze the Data
+
+The notebook is well documented and will guide you through the exercise. Some of the main tasks that will be covered include:
+
+* Load packages and data and do the initial transformation and various feature engineering.
+
+* Use the built-in SVM algorithm from R4ML to predict whether an airline will be delayed or not.
+
+* Observe the output accuracy and confusion matrix.
+
+* Use Cross Validation to improve the accuracy of the classifications.
+
+You will also see the advantages of using R4ML, which is a git-downloadable open-source R packaged from IBM. Some of these include:
+
+* Created on top of SparkR and Apache SystemML, so it supports features from both.
+
+* Acts as an R bridge between SparkR and Apache SystemML.
+
+* Provides a collection of canned algorithms.
+
+* Provides the ability to create custom ML algorithms.
+
+* Provides both SparkR and Apache SystemML functionality.
+
+* APIs that should be familiar to R users.
+
+## Sample output
+
+## Links
+
+ - Watson Studio: https://datascience.ibm.com/docs/content/analyze-data/creating-notebooks.html.
+ - Data: http://stat-computing.org/dataexpo/2009/the-data.html
+
+# Learn more
+
+* **Data Analytics Code Patterns**: Enjoyed this Code Pattern? Check out our other [Data Analytics Code Patterns](https://developer.ibm.com/code/technologies/data-science/)
+* **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
+* **Watson Studio**: Master the art of data science with IBM's [Watson Studio](https://dataplatform.ibm.com/)
+* **Spark on IBM Cloud**: Need a Spark cluster? Create up to 30 Spark executors on IBM Cloud with our [Spark service](https://console.bluemix.net/catalog/services/apache-spark)
 
 # License
 

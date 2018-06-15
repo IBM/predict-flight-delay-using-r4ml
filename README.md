@@ -1,16 +1,16 @@
 # Predicting flight delay and building an ML pipeline using R4ML
 
-In this developer journey we will use R4ML, a scalable R package, running on IBM Watson Studio to perform various Machine Learning exercises. For those users who are unfamiliar with the Watson Studio, it is an interactive, collaborative, cloud-based environment where data scientists, developers, and others interested in data science can use tools (e.g., RStudio, Jupyter Notebooks, Spark, etc.) to collaborate, share, and gather insight from their data.
+In this developer journey we will use R4ML, a scalable R package, running on IBM Watson Studio to perform various Machine Learning exercises. For those users who are unfamiliar with Watson Studio, it is an interactive, collaborative, cloud-based environment where data scientists, developers, and others interested in data science can use tools (e.g., RStudio, Jupyter Notebooks, Spark, etc.) to collaborate, share, and gather insight from their data.
 
 When the reader has completed this journey, they will understand how to:
 
 * Use [Jupyter Notebooks](http://jupyter.org/) to load, visualize, and analyze data.
 * Run Notebooks in [IBM Watson Studio](https://dataplatform.ibm.com).
-* Leverage [R4ML](https://github.com/SparkTC/r4ml) to conduct preprocessing and exploratory analysis with big data.
+* Leverage [R4ML](https://github.com/CODAIT/r4ml) to conduct preprocessing and exploratory analysis with big data.
 
 The Intended audience of this code pattern is data scientists, who wish to apply scalable machine learning algorithms using R.
 
-This specific Code Pattern will provide a SVM (Suport Vector Machine) example to demonstrate the ease and power of R4ML in implementing scalable classification. R4ML provides various out-of-the-box algorithms to experiment with. For more information about additional R4ML functionality, support, documentation, and roadmap, please vist [R4ML](https://github.com/SparkTC/r4ml).
+This specific Code Pattern will provide a SVM (Suport Vector Machine) example to demonstrate the ease and power of R4ML in implementing scalable classification. R4ML provides various out-of-the-box algorithms to experiment with. For more information about additional R4ML functionality, support, documentation, and roadmap, please vist [R4ML](https://github.com/CODAIT/r4ml).
 
 ### What problem does it solve for developers?
 
@@ -19,9 +19,9 @@ This specific Code Pattern will provide a SVM (Suport Vector Machine) example to
 
 ### Source of data
 
-- We will use the Airline On-Time Statistics and Delay Causes from [RITA](http://www.rita.dot.gov). A 1% sample of the "airline" dataset is available [here](http://stat-computing.org/dataexpo/2009/the-data.html). All of the data is in the public domain.
-- For this Code Pattern, we will use a subset of the above dataset, which is shipped with R4ML.
-- This Code Pattern can also work with the larger RITA dataset.
+* We will use the Airline On-Time Statistics and Delay Causes from [RITA](http://www.rita.dot.gov). A 1% sample of the dataset is available from the [American Statistical Association (ASA)](http://stat-computing.org/dataexpo/2009/the-data.html). All of the data is in the public domain.
+* For this Code Pattern, we will use a subset of the above dataset, which is shipped with R4ML.
+* This Code Pattern can also work with the larger RITA dataset.
 
 ## Flow
 
@@ -41,7 +41,7 @@ Included Components:
 ## Featured Technologies:
 
 * [Jupyter Notebooks](http://jupyter.org/): An open source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
-* [R4ML](https://github.com/SparkTC/r4ml): R4ML is a scalable, hybrid approach to ML/Stats using R, Apache SystemML, and Apache Spark
+* [R4ML](https://github.com/CODAIT/r4ml): R4ML is a scalable, hybrid approach to ML/Stats using R, Apache SystemML, and Apache Spark
 
 # Steps:
 
@@ -198,8 +198,9 @@ You will also see the advantages of using R4ML, which is a git-downloadable open
 
 ## Links
 
- - Watson Studio: https://datascience.ibm.com/docs/content/analyze-data/creating-notebooks.html.
- - Data: http://stat-computing.org/dataexpo/2009/the-data.html
+* [Watson Studio](https://datascience.ibm.com/docs/content/analyze-data/creating-notebooks.html)
+* [Data Set](http://stat-computing.org/dataexpo/2009/the-data.html)
+* [R4ML](https://github.com/CODAIT/r4ml)
 
 # Learn more
 

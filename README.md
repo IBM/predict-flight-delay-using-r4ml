@@ -1,8 +1,8 @@
 # Predicting flight delay and building an ML pipeline using R4ML
 
-In this developer journey we will use R4ML, a scalable R package, running on IBM Watson Studio to perform various Machine Learning exercises. For those users who are unfamiliar with Watson Studio, it is an interactive, collaborative, cloud-based environment where data scientists, developers, and others interested in data science can use tools (e.g., RStudio, Jupyter Notebooks, Spark, etc.) to collaborate, share, and gather insight from their data.
+In this Code Pattern we will use R4ML, a scalable R package, running on IBM Watson Studio to perform various Machine Learning exercises. For those users who are unfamiliar with Watson Studio, it is an interactive, collaborative, cloud-based environment where data scientists, developers, and others interested in data science can use tools (e.g., RStudio, Jupyter Notebooks, Spark, etc.) to collaborate, share, and gather insight from their data.
 
-When the reader has completed this journey, they will understand how to:
+When the reader has completed this Code Pattern, they will understand how to:
 
 * Use [Jupyter Notebooks](http://jupyter.org/) to load, visualize, and analyze data.
 * Run Notebooks in [IBM Watson Studio](https://dataplatform.ibm.com).
@@ -10,7 +10,9 @@ When the reader has completed this journey, they will understand how to:
 
 The Intended audience of this code pattern is data scientists, who wish to apply scalable machine learning algorithms using R.
 
-This specific Code Pattern will provide a SVM (Suport Vector Machine) example to demonstrate the ease and power of R4ML in implementing scalable classification. R4ML provides various out-of-the-box algorithms to experiment with. For more information about additional R4ML functionality, support, documentation, and roadmap, please visit [R4ML](https://github.com/CODAIT/r4ml).
+This specific Code Pattern will provide a SVM (Suport Vector Machine) example to demonstrate the ease and power of R4ML in implementing scalable classification.
+
+R4ML provides various out-of-the-box algorithms to experiment with. For those users who are new to R4ML, please visit the [R4ML on Watson Studio](https://github.com/IBM/r4ml-on-watson-studio) Code Pattern for an introduction on how it can be implemented for data preprocessing and data exploration. For more information about additional R4ML functionality, support, documentation, and roadmap, please visit [R4ML](https://github.com/CODAIT/r4ml).
 
 ### What problem does it solve for developers?
 
@@ -192,6 +194,7 @@ You will also see the advantages of using R4ML, which is a git-downloadable open
 * [Watson Studio](https://datascience.ibm.com/docs/content/analyze-data/creating-notebooks.html)
 * [Data Set](http://stat-computing.org/dataexpo/2009/the-data.html)
 * [R4ML](https://github.com/CODAIT/r4ml)
+* [R4ML on Watson Studio Code Pattern](https://github.com/IBM/r4ml-on-watson-studio)
 
 # Learn more
 

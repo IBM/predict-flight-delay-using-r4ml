@@ -189,6 +189,21 @@ You will also see the advantages of using R4ML, which is a git-downloadable open
 
 ## Sample output
 
+The following examples taken from the notebook show how we attempt to determine our model will preform in predicting flight delays:
+
+Here we take a look at a R4ML confusion matrix, where we can see that True Positive and True Negative are very high and that False Positive and False Negative are low. This means we can be more confident of our model than just the accuracy-based analysis.
+
+![](doc/source/images/confusion-matrix.png)
+
+We can also see the predicted scores. The higher the score, the higher the margin and the better or more confident we are of the prediction.
+
+![](doc/source/images/predicted-scores.png)
+
+In the end, we select the best model by using cross-validation. Here we show the results of testing our models against a series of lambda parameter values.
+
+![](doc/source/images/lambda-chart.png)
+
+
 ## Links
 
 * [Watson Studio](https://datascience.ibm.com/docs/content/analyze-data/creating-notebooks.html)

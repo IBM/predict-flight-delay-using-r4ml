@@ -189,7 +189,7 @@ You will also see the advantages of using R4ML, which is a git-downloadable open
 
 ## Sample output
 
-The following examples taken from the notebook show how we attempt to determine our model will preform in predicting flight delays:
+The following examples taken from the notebook show how we attempt to determine our how our model will preform in predicting flight delays:
 
 Here we take a look at a R4ML confusion matrix, where we can see that True Positive and True Negative are very high and that False Positive and False Negative are low. This means we can be more confident of our model than just the accuracy-based analysis.
 

@@ -4,8 +4,8 @@ In this Code Pattern we will use R4ML, a scalable R package, running on IBM Wats
 
 When the reader has completed this Code Pattern, they will understand how to:
 
-* Use [Jupyter Notebooks](http://jupyter.org/) to load, visualize, and analyze data.
-* Run Notebooks in [IBM Watson Studio](https://dataplatform.ibm.com).
+* Use [Jupyter Notebooks](https://jupyter.org/) to load, visualize, and analyze data.
+* Run Notebooks in [IBM Watson Studio](https://dataplatform.cloud.ibm.com/).
 * Leverage [R4ML](https://github.com/CODAIT/r4ml) to conduct preprocessing and exploratory analysis with big data.
 
 The Intended audience of this code pattern is data scientists, who wish to apply scalable machine learning algorithms using R.
@@ -21,7 +21,7 @@ R4ML provides various out-of-the-box algorithms to experiment with. For those us
 
 ### Source of data
 
-* We will use the Airline On-Time Statistics and Delay Causes from [RITA](http://www.rita.dot.gov). A 1% sample of the dataset is available from the [American Statistical Association (ASA)](http://stat-computing.org/dataexpo/2009/the-data.html). All of the data is in the public domain.
+* We will use the Airline On-Time Statistics and Delay Causes from [RITA](https://www.transportation.gov/research-technology). A 1% sample of the dataset is available from the [American Statistical Association (ASA)](http://stat-computing.org/dataexpo/2009/the-data.html). All of the data is in the public domain.
 * For this Code Pattern, we will use a subset of the above dataset, which is shipped with R4ML.
 * This Code Pattern can also work with the larger RITA dataset.
 
@@ -36,12 +36,12 @@ R4ML provides various out-of-the-box algorithms to experiment with. For those us
 
 Included Components:
 
-* [IBM Watson Studio](https://dataplatform.ibm.com): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
-* [IBM Analytics for Apache Spark](https://console.ng.bluemix.net/catalog/services/apache-spark): An open source cluster computing framework optimized for extremely fast and large scale data processing.
+* [IBM Watson Studio](https://dataplatform.cloud.ibm.com/): Analyze data using RStudio, Jupyter, and Python in a configured, collaborative environment that includes IBM value-adds, such as managed Spark.
+* [IBM Analytics for Apache Spark](https://cloud.ibm.com/catalog/services/apache-spark): An open source cluster computing framework optimized for extremely fast and large scale data processing.
 
 ## Featured Technologies:
 
-* [Jupyter Notebooks](http://jupyter.org/): An open source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
+* [Jupyter Notebooks](https://jupyter.org/): An open source web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text.
 * [R4ML](https://github.com/CODAIT/r4ml): R4ML is a scalable, hybrid approach to ML/Stats using R, Apache SystemML, and Apache Spark
 
 # Steps:
@@ -62,10 +62,10 @@ This Code Pattern consists of following activities:
 
 ### 1. Sign up for the Watson Studio
 
-Log in or sign up for IBM's [Watson Studio](https://dataplatform.ibm.com).
+Log in or sign up for IBM's [Watson Studio](https://dataplatform.cloud.ibm.com/).
 
 > Note: if you would prefer to skip the remaining Watson Studio set-up steps and just follow along by viewing the completed Notebook, simply:
-> * View the completed [notebook](https://github.com/IBM/predict-flight-delay-using-r4ml/tree/master/notebooks/R4ML_Classification_modeling_using_SVM.ipynb) and its outputs, as is. 
+> * View the completed [notebook](https://github.com/IBM/predict-flight-delay-using-r4ml/blob/master/notebooks/R4ML_Classification_modeling_using_SVM.ipynb) and its outputs, as is. 
 > * While viewing the notebook, you can optionally download it to store for future use.
 > * When complete, continue this code pattern by jumping ahead to the [Explore and Analyze the Data](#explore-and-analyze-the-data) section.
 
@@ -213,17 +213,17 @@ In the end, we adjust our model by using cross-validation. Here we show the resu
 
 ## Links
 
-* [Watson Studio](https://datascience.ibm.com/docs/content/analyze-data/creating-notebooks.html)
+* [Watson Studio](https://dataplatform.cloud.ibm.com/docs/content/analyze-data/creating-notebooks.html)
 * [Data Set](http://stat-computing.org/dataexpo/2009/the-data.html)
 * [R4ML](https://github.com/CODAIT/r4ml)
 * [R4ML on Watson Studio Code Pattern](https://github.com/IBM/r4ml-on-watson-studio)
 
 # Learn more
 
-* **Data Analytics Code Patterns**: Enjoyed this Code Pattern? Check out our other [Data Analytics Code Patterns](https://developer.ibm.com/code/technologies/data-science/)
+* **Data Analytics Code Patterns**: Enjoyed this Code Pattern? Check out our other [Data Analytics Code Patterns](https://developer.ibm.com/technologies/data-science/)
 * **AI and Data Code Pattern Playlist**: Bookmark our [playlist](https://www.youtube.com/playlist?list=PLzUbsvIyrNfknNewObx5N7uGZ5FKH0Fde) with all of our Code Pattern videos
-* **Watson Studio**: Master the art of data science with IBM's [Watson Studio](https://dataplatform.ibm.com/)
-* **Spark on IBM Cloud**: Need a Spark cluster? Create up to 30 Spark executors on IBM Cloud with our [Spark service](https://console.bluemix.net/catalog/services/apache-spark)
+* **Watson Studio**: Master the art of data science with IBM's [Watson Studio](https://dataplatform.cloud.ibm.com/)
+* **Spark on IBM Cloud**: Need a Spark cluster? Create up to 30 Spark executors on IBM Cloud with our [Spark service](https://cloud.ibm.com/catalog/services/apache-spark)
 
 # License
 
